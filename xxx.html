@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Background</title>
+	<style>
+		body {
+			background-color: #1c1c1c;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			overflow: hidden;
+			position: relative;
+			height: 100vh;
+		}
+
+		.star {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 2px;
+			height: 2px;
+			border-radius: 50%;
+			background-color: #fff;
+			opacity: 0;
+			animation: twinkle 5s infinite;
+			animation-fill-mode: forwards;
+			z-index: 0;
+		}
+
+		@keyframes twinkle {
+			0% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+		.text {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  margin: auto;
+		  width: fit-content;
+		  height: fit-content;
+		  font-size: 70px;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		  z-index: 9999;
+		  color: whitesmoke;	
+		}
+
+
+
+		.image-container {
+			position: absolute;
+			top: 50%;
+			right: 10%;
+			transform: translateY(-50%);
+			opacity: 0.5;
+			transition: transform 0.5s;
+			z-index: 1;
+		}
+
+		.image {
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			object-fit: cover;
+			cursor: pointer;
+			transition: transform 0.2s;
+			backface-visibility: hidden;
+			transform-style: preserve-3d;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+		}
+
+		.image:hover {
+			transform: scale(1.1);
+		}
+
+		.image-container:hover {
+			transform: translate(-10px, -50%) translateY(-10px);
+		}
+
+		.image-container:hover .image {
+			transform: rotateY(180deg) scale(1.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="text">BYPASS TOOL ⚡</div>
+	<script>
+		// create stars dynamically
+		for (var i = 0; i < 200; i++) {
+			var star = document.createElement('div');
+			star.classList.add('star');
+			star.style.top = Math.floor(Math.random() * 100) + '%';
+			star.style.left = Math.floor(Math.random() * 100) + '%';
+			star.style.animationDelay = Math.floor(Math.random() * 5) + 's';
+			document.body.appendChild(star);
+		}
+	</script>
+</body>
+</html>
