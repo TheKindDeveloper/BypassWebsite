@@ -1,51 +1,36 @@
-<!--
-		██████╗ ██╗   ██╗██████╗  █████╗ ███████╗███████╗
-		██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝
-		██████╔╝ ╚████╔╝ ██████╔╝███████║███████╗███████╗
-		██╔══██╗  ╚██╔╝  ██╔═══╝ ██╔══██║╚════██║╚════██║
-		██████╔╝   ██║   ██║     ██║  ██║███████║███████║
-		╚═════╝    ╚═╝   ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝                                              
--->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1084075668943413269/1092799750572605510/R.png?width=640&height=640">
-	<title>Bypass Tool</title>
-	<style>
-		body {
-			background-color: #1c1c1c;
-			color: #fff;
-			font-family: Arial, sans-serif;
-			overflow: hidden;
-			position: relative;
-			height: 100vh;
-		}
+    <style>
+    /* Set scrollbar width */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
 
-		.star {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 2px;
-			height: 2px;
-			border-radius: 50%;
-			background-color: whitesmoke;
-			opacity: 0;
-			animation: twinkle 3.5s infinite;
-			animation-fill-mode: forwards;
-			z-index: 0;
-		}
+    /* Add blue color to scrollbar thumb and make it rounded */
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(0, 0, 255); /* Blue color in RGB */
+      border-radius: 10px; /* Make the corners rounded */
+    }
 
-		@keyframes twinkle {
-			0% {
-				opacity: 0;
-			}
-			50% {
-				opacity: 1;
-			}
-			100% {
-				opacity: 0;
-			}
-		}
+      body {
+        background-color: #18181B;
+      }
+      /* Updated CSS */
+      .card {
+        transition: all 0.4s ease-in-out;
+        transform: scale(0.95);
+      }
+
+      .card:hover {
+        transform: scale(1);
+      }
+
+      .prod-img img {
+        max-height: 150px;
+      }
+
 		.container {
 		  display: flex;
 		  flex-direction: column;
@@ -61,44 +46,118 @@
 		  color: whitesmoke;
 		}
 
-		.button {
-			position: fixed;
-			top: 62%;
-			left: 48%;
-			transform: translate(-50%, -50%);
-			padding: 20px 30px;
-			font-size: 24px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #fff;
-			background-color: blue;
-			border: none;
-			border-radius: 50px;
-			cursor: pointer;
-			z-index: 9999;
-			transition: all 0.6s ease;
-		}
 
-		.button:hover {
-			transform: translate(-50%, -50%) scale(1.1);
-		}
-	</style>
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+    <script src="https://cdn.sellix.io/static/js/embed.js" ></script>
+    <script src="./index.js"></script>
+    <title>Bypass Tool</title>
 </head>
+<!DOCTYPE html>
+<div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
+    <strong  style="text-shadow: 0 0 3px; font-size: 3em; color: #3B82F6;">Bypass Tool V3.1 ⚡</strong>
+  </div>
+  <div class="download-container">
+    <a href="https://cdn.discordapp.com/attachments/1092896166183710830/1100872762576347198/Bypass.zip" download>
+      <button class="download-btn">DOWNLOAD</button>
+    </a>
+  </div>
+  
+  <style>
+    .download-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+    }
+  
+    .download-btn {
+      padding: 15px 30px;
+      font-size: 24px;
+	  font-weight: bold;
+      background-color: blue;
+      color: #BEE3F8; /* Light blue color */
+      border: none;
+      border-radius: 50px;
+      transition: transform 0.6s ease-in-out;
+    }
+  
+    .download-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  
 <body>
-	<div class="container">
-		<div class="text">BYPASS TOOL V3.0 ⚡</div>
-		<button class="button" onclick="window.location.href='https://cdn.discordapp.com/attachments/1092896166183710830/1099645342502367262/Bypass.zip'">Download</button>
-	</div>
-	<script>
-		// create stars dynamically
-		for (var i = 0; i < 200; i++) {
-			var star = document.createElement('div');
-			star.classList.add('star');
-			star.style.top = Math.floor(Math.random() * 100) + '%';
-			star.style.left = Math.floor(Math.random() * 100) + '%';
-			star.style.animationDelay = Math.floor(Math.random() * 5) + 's';
-			document.body.appendChild(star);
-		}
-	</script>
+    <div class="container mx-auto p-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl height-5vh">
+        <!-- Item Start -->
+        <div class="card flex flex-col p-10 bg-black rounded-lg shadow-2xl justify-between">
+            <div class="prod-title mb-5">
+                <p class="text-2xl uppercase text-blue-500 font-bold text-center">Discord Tokens</p>
+                <p class="lowercase text-sm text-gray-400 text-center">
+                    Email Verified Tokens without captcha onjoin
+                </p>
+            </div>
+            <div class="prod-img mb-5">
+                <img src="https://storage.sell.app/store/4816/listings/0fMt9g9Y8VvhgXfJSAhmWyXnt5ELMjEcWRCbdtZG.png"
+                    class="w-full object-cover object-center h-48" />
+            </div>
+            <div class="prod-info grid gap-10">
+                <div class="flex flex-col md:flex-row justify-between items-center text-gray-900">
+                    <p class="font-bold text-white text-xl">$0.02</p>
+                    <button data-sellix-product="6441975446c95"
+                        class="px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Buy
+                        now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card flex flex-col p-10 bg-black rounded-lg shadow-2xl justify-between">
+            <div class="prod-title mb-5">
+                <p class="text-2xl uppercase text-blue-500 font-bold text-center">CRACKED TOKENS</p>
+                <p class="lowercase text-sm text-gray-400 text-center">
+                    2015 - 2022 Aged Tokens to MassDM
+                </p>
+            </div>
+            <div class="prod-img mb-5">
+                <img src="https://epicnpc-cdn.com/s3/xf/internal_data/attachments/4583/4583005-5cb297d61d34ba301f18755d771abef2.png"
+                    class="w-full object-cover object-center h-48" />
+            </div>
+            <div class="prod-info grid gap-10">
+                <div class="flex flex-col md:flex-row justify-between items-center text-gray-900">
+                    <p class="font-bold text-white text-xl">$0.28</p>
+                    <!-- Change the data sellix product by your product -->
+                    <button data-sellix-product="6414d9869ba31"
+                        class="px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Buy
+                        now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card flex flex-col p-10 bg-black rounded-lg shadow-2xl justify-between">
+          <div class="prod-title mb-5">
+              <p class="text-2xl uppercase text-blue-500 font-bold text-center">UNCLAIMED TOKENS</p>
+              <p class="lowercase text-sm text-gray-400 text-center">
+                  2015 - 2022 UNCLAIMED Aged Tokens!
+              </p>
+          </div>
+          <div class="prod-img mb-5">
+              <img src="https://epicnpc-cdn.com/s3/xf/internal_data/attachments/4583/4583005-5cb297d61d34ba301f18755d771abef2.png"
+                  class="w-full object-cover object-center h-48" />
+          </div>
+          <div class="prod-info grid gap-10">
+              <div class="flex flex-col md:flex-row justify-between items-center text-gray-900">
+                  <p class="font-bold text-white text-xl">$0.45</p>
+                  <!-- Change the data sellix product by your product -->
+                  <button data-sellix-product="6416019db11e3"
+                      class="px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Buy
+                      now</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    </div>
 </body>
 </html>
