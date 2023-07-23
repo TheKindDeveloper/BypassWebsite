@@ -10,7 +10,7 @@
         // Check if the user agent is "BYPASS-ON-TOP" and redirect accordingly
         var userAgent = navigator.userAgent;
         if (userAgent === "BYPASS-ON-TOP") {
-            window.location.href = "https://discord.com"; // Redirect to discord.com
+            document.write("<h1>Access Denied</h1><p>Welcome   </p>");
         } else {
             // Display an error message or do something else
             document.write("<h1>Access Denied</h1><p>Your browser or client is not allowed to access this website.</p>");
