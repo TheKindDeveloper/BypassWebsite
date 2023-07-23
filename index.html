@@ -2,27 +2,18 @@
 <html>
 
 <head>
-    <title>Restricted Page</title>
+    <title>Redirect Example</title>
 </head>
 
 <body>
-    <div id="content">
-        <h1>Restricted Page</h1>
-        <p>This page can only be accessed by the user agent "BYPASS-ON-TOP".</p>
-    </div>
-
     <script>
-        // Check if the user agent is "BYPASS-ON-TOP" and display the content accordingly
+        // Check if the user agent is "BYPASS-ON-TOP" and redirect accordingly
         var userAgent = navigator.userAgent;
-        var contentDiv = document.getElementById("content");
-
         if (userAgent === "BYPASS-ON-TOP") {
-            // Show the restricted content for the allowed user agent
-            contentDiv.style.display = "block";
+            window.location.href = "https://discord.com"; // Redirect to discord.com
         } else {
-            // Hide the content and show an error message for other user agents
-            contentDiv.style.display = "none";
-            document.body.innerHTML = '<h1>Access Denied</h1><p>Your browser or client is not allowed to access this website.</p>';
+            // Display an error message or do something else
+            document.write("<h1>Access Denied</h1><p>Your browser or client is not allowed to access this website.</p>");
         }
     </script>
 </body>
