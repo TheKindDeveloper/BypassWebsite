@@ -7,12 +7,10 @@
 
 <body>
     <script>
-        // Check if the user agent is "BYPASS-ON-TOP" and redirect accordingly
         var userAgent = navigator.userAgent;
         if (userAgent === "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183") {
-            document.write("<h1>Access Denied</h1><p>Welcome   </p>");
+            document.write("<p>Welcome   </p>");
         } else {
-            // Display an error message or do something else
             document.write("<h1>Access Denied</h1><p>Your browser or client is not allowed to access this website.</p>");
         }
     </script>
